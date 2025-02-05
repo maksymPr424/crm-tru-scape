@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import { Form, Formik } from 'formik';
 import Button from '@/app/components/button';
@@ -20,9 +21,11 @@ const initialValues: CompanyFieldValues = {
   date: '',
   description: '',
 };
+
 export interface CompanyFormProps {
   onSubmit: (values: CompanyFieldValues) => void | Promise<void>;
 }
+
 export default function CompanyForm({ onSubmit }: CompanyFormProps) {
   return (
     <Formik initialValues={initialValues} onSubmit={onSubmit}>
